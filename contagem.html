@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super contador</title>
+<style>
+    body {
+       background: rgb(80, 107, 244)
+    }
+    header {
+        color:white
+    
+    }
+
+    
+    
+</style>
+</head>
+<body>
+    <header> 
+        <h1> Vamos contar! </h1> 
+    </header>
+    <section>
+        <div id='dados' >
+            <p>Inicio:<input type="number" name="inicio" id="txti"> </p>
+            <p>Fim:<input type="number" name="fim" id="txtf"> </p>
+            <p>Passo: <input type="number" name="passo" id="txtp"> </p>
+            <p><input type="button" value='contar' onclick='contar()'></p>
+        </div>
+    <div id="res"> Preparando a contagem... </div>
+    
+    </section>
+    <footer>
+        Contador com passo variável
+    </footer>
+    <script>
+        function contar() {
+            var ini = document.getElementById('txti')
+            var fim = document.getElementById('txtf')
+            var passo = document.getElementById('txtp') 
+        
+        if (ini.value.length == 0 || fim.value.length == 0 || passo.value.lenght == 0)
+           { window.alert('ERRO! Faltam dados!!') }
+           else { 
+           res.innerText = 'Contando:'
+           var i = Number(ini.value)
+           var f = Number(fim.value)
+           var p = Number(passo.value)
+
+           for ( var c = i; c <= f ; c = c + p){
+            res.innerText += `${c} ,`
+           }
+
+           }
+    
+    }
+    </script>
+</body>
+</html>
